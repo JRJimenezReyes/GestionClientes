@@ -6,22 +6,22 @@ public enum Opcion {
 			vista.salir();
 		}
 	},
-	INSERTAR_AULA("Insertar cliente") {
+	INSERTAR_CLIENTE("Insertar cliente") {
 		public void ejecutar() {
 			vista.insertarCliente();
 		}
 	},
-	BORRAR_AULA("Borrar cliente") {
+	BORRAR_CLIENTE("Borrar cliente") {
 		public void ejecutar() {
 			vista.borrarCliente();
 		}
 	},
-	BUSCAR_AULA("Buscar cliente") {
+	BUSCAR_CLIENTE("Buscar cliente") {
 		public void ejecutar() {
 			vista.buscarCliente();
 		}
 	},
-	LISTAR_AULAS("Listar clientes") {
+	LISTAR_CLIENTES("Listar clientes") {
 		public void ejecutar() {
 			vista.listarClientes();
 		}

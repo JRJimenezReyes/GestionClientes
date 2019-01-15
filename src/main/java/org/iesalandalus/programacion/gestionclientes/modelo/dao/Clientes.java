@@ -18,10 +18,10 @@ public class Clientes {
 	}
 	
 	public Clientes(Clientes clientes) {
-		setProfesores(clientes);
+		setClientes(clientes);
 	}
 	
-	private void setProfesores(Clientes clientes) {
+	private void setClientes(Clientes clientes) {
 		if (clientes == null) {
 			throw new IllegalArgumentException("No se pueden copiar clientes nulos.");
 		}
