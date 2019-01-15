@@ -51,14 +51,15 @@ public class Clientes {
 		}
 		int indice = buscarIndiceCliente(cliente);
 		if (!indiceNoSuperaTamano(indice)) {
-			coleccionClientes[indice] = cliente;
+			coleccionClientes[indice] = new Cliente(cliente);
 			numClientes++;
 		} else {
 			if (indiceNoSuperaCapacidad(indice)) {
 				throw new OperationNotSupportedException("El cliente ya existe.");
 			} else {
 				throw new OperationNotSupportedException("No se aceptan más clientes.");
-			}		}
+			}		
+		}
 	}
 	
 	private int buscarIndiceCliente(Cliente cliente) {
@@ -86,7 +87,7 @@ public class Clientes {
 		int indice = 0;
 		indice = buscarIndiceCliente(cliente);
 		if (indiceNoSuperaTamano(indice)) {
-			return coleccionClientes[indice];
+			return new Cliente(coleccionClientes[indice]);
 		} else {
 			return null;
 		}
