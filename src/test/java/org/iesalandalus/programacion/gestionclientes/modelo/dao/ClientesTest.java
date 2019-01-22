@@ -6,6 +6,8 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 
+import java.time.LocalDate;
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.gestionclientes.modelo.dao.Clientes;
@@ -19,9 +21,9 @@ public class ClientesTest {
 	
 	private static final String ERROR_EXCEPCION = "Debería haber saltado la excepción.";
 	private static final String ERROR_NO_EXCEPCION = "No debería haber saltado la excepción.";
-	private static final DatosPersonales DATOS_PERSONALES1 = new DatosPersonales("Cliente", "1", "11111111A");
-	private static final DatosPersonales DATOS_PERSONALES2 = new DatosPersonales("Cliente", "2", "22222222B");
-	private static final DatosPersonales DATOS_PERSONALES3 = new DatosPersonales("Cliente", "3", "33333333C");
+	private static final DatosPersonales DATOS_PERSONALES1 = new DatosPersonales("Cliente", "1", "11111111A", LocalDate.of(2010, 1, 1));
+	private static final DatosPersonales DATOS_PERSONALES2 = new DatosPersonales("Cliente", "2", "22222222B", LocalDate.of(2011,  2,  2));
+	private static final DatosPersonales DATOS_PERSONALES3 = new DatosPersonales("Cliente", "3", "33333333C", LocalDate.of(2012, 3, 3));
 	private static final DireccionPostal DIRECCION_POSTAL = new DireccionPostal("Finca Santa Isabel s/n", "Almería", "04008");
 	private static final DatosContacto DATOS_CONTACTO1 = new DatosContacto("950111111", "a@a.es", DIRECCION_POSTAL);
 	private static final DatosContacto DATOS_CONTACTO2 = new DatosContacto("950222222", "b@b.es", DIRECCION_POSTAL);
@@ -209,7 +211,7 @@ public class ClientesTest {
 	public void borrarNoValidoTest() {
 		Clientes clientes = insertarTres();
 		try {
-			DatosPersonales datosPersonales = new DatosPersonales("Cliente", "4", "44444444D");
+			DatosPersonales datosPersonales = new DatosPersonales("Cliente", "4", "44444444D", LocalDate.of(2014, 4, 4));
 			Cliente cliente = new Cliente(datosPersonales, DATOS_CONTACTO1);
 			clientes.borrar(cliente);
 			fail(ERROR_EXCEPCION);

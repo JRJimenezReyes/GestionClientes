@@ -46,6 +46,8 @@ public class Consola {
 		String dni = Entrada.cadena();
 		System.out.print("Introduce el teléfono: ");
 		String telefono = Entrada.cadena();
+		System.out.print("Introduce la fecha de nacimiento: ");
+		String fechaNacimiento = Entrada.cadena();
 		System.out.print("Introduce el correo: ");
 		String correo = Entrada.cadena();
 		System.out.print("Introduce la dirección: ");
@@ -54,7 +56,7 @@ public class Consola {
 		String localidad = Entrada.cadena();
 		System.out.print("Introduce el código postal: ");
 		String codigoPostal = Entrada.cadena();
-		DatosPersonales datosPersonales = new DatosPersonales(nombre, apellidos, dni);
+		DatosPersonales datosPersonales = new DatosPersonales(nombre, apellidos, dni, fechaNacimiento);
 		DireccionPostal direccionPostal = new DireccionPostal(direccion, localidad, codigoPostal);
 		DatosContacto datosContacto = new DatosContacto(telefono, correo, direccionPostal);
 		return new Cliente(datosPersonales, datosContacto);
@@ -66,7 +68,7 @@ public class Consola {
 			System.out.print("Introduce el dni: ");
 			dni = Entrada.cadena();
 		} while (dni.trim().equals(""));
-		DatosPersonales datosPersonalesDni = new DatosPersonales("Cliente", "1", dni);
+		DatosPersonales datosPersonalesDni = new DatosPersonales("Cliente", "1", dni, "01/01/1999");
 		return new Cliente(datosPersonalesDni, DATOS_CONTACTO_FICTICIOS);
 	}
 	

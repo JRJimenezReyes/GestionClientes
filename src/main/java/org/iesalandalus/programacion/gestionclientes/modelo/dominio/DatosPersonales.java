@@ -1,17 +1,31 @@
 package org.iesalandalus.programacion.gestionclientes.modelo.dominio;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 public class DatosPersonales {
 
 	private static final String ER_DNI = "\\d{8}[A-Za-z]";
+	private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
 	private String nombre;
 	private String apellidos;
 	private String dni;
+	private LocalDate fechaNacimiento;
 	
-	public DatosPersonales(String nombre, String apellidos, String dni) {
+	public DatosPersonales(String nombre, String apellidos, String dni, LocalDate fechaNacimiento) {
 		setNombre(nombre);
 		setApellidos(apellidos);
 		setDni(dni);
+		setFechaNacimiento(fechaNacimiento);
+	}
+	
+	public DatosPersonales(String nombre, String apellidos, String dni, String fechaNacimiento) {
+		setNombre(nombre);
+		setApellidos(apellidos);
+		setDni(dni);
+		setFechaNacimiento(fechaNacimiento);
 	}
 	
 	public DatosPersonales(DatosPersonales datosPersonales) {
@@ -21,6 +35,7 @@ public class DatosPersonales {
 		setNombre(datosPersonales.nombre);
 		setApellidos(datosPersonales.apellidos);
 		setDni(datosPersonales.dni);
+		setFechaNacimiento(datosPersonales.fechaNacimiento);
 	}
 	
 	private void setNombre(String nombre) {
@@ -53,6 +68,24 @@ public class DatosPersonales {
 		this.dni = dni;
 	}
 	
+	private void setFechaNacimiento(LocalDate fechaNacimiento) {
+		if (fechaNacimiento == null) {
+			throw new IllegalArgumentException("La fecha de nacimiento no puede ser nula.");
+		}
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	
+	private void setFechaNacimiento(String fechaNacimiento) {
+		if (fechaNacimiento == null) {
+			throw new IllegalArgumentException("La fecha de nacimiento no puede ser nula.");
+		}
+		try {
+			this.fechaNacimiento = LocalDate.parse(fechaNacimiento, FORMATO_FECHA);
+		} catch (DateTimeParseException e) {
+			throw new IllegalArgumentException("El formato de la fecha de nacimiento no es correcto.");
+		}
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -63,6 +96,10 @@ public class DatosPersonales {
 	
 	public String getDni() {
 		return dni;
+	}
+	
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
 	}
 
 	@Override
@@ -97,7 +134,8 @@ public class DatosPersonales {
 
 	@Override
 	public String toString() {
-		return "[nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + "]";
+		return "[nombre=" + nombre + ", apellidos=" + apellidos + ", dni=" + dni + 
+				", fecha nacimiento=" + fechaNacimiento.format(FORMATO_FECHA) + "]";
 	}
 
 }
