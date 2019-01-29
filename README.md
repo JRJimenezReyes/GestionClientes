@@ -17,3 +17,9 @@ Debes crear un programa para la gestión de clientes de una empresa.
 Para todo ello te propongo el siguiente diagrama de clases:
 
 ![Diagrama de clases para GestioClientes](src/main/resources/gestionClientes.png)
+
+## Commit etiquetado (tag) como "array"
+Se implementan las clases DAO con `array`.
+
+## Commit etiquetado (tag) como "listas"
+Se implementan las clases DAO con `ArrayList`.

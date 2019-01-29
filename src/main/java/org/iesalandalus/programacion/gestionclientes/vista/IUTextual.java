@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.gestionclientes.vista;
 
+import java.util.List;
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.gestionclientes.modelo.ModeloGestionClientes;
@@ -71,8 +73,8 @@ public class IUTextual {
 	
 	public void listarClientes() {
 		Consola.mostrarCabecera("Listar clientes");
-		String[] clientes = modelo.representarClientes();
-		if (clientes.length > 0) {
+		List<String> clientes = modelo.representarClientes();
+		if (!clientes.isEmpty()) {
 			for (String cliente : clientes) {
 				System.out.println(cliente);
 			}

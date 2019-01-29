@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.gestionclientes.modelo;
 
+import java.util.List;
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.gestionclientes.modelo.dao.Clientes;
@@ -25,7 +27,7 @@ public class ModeloGestionClientes {
 		return clientes.buscar(cliente);
 	}
 	
-	public String[] representarClientes() {
+	public List<String> representarClientes() {
 		return clientes.representar();
 	}
 }
