@@ -7,10 +7,10 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.fail;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.gestionclientes.modelo.dao.Clientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DatosContacto;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DatosPersonales;
@@ -113,10 +113,10 @@ public class ClientesTest {
 			clientes.insertar(CLIENTE3);
 			assertEquals(3, clientes.getNumClientes());
 			assertEquals(CLIENTE3, clientes.buscar(CLIENTE3));
-			Cliente[] arrayProfesores = clientes.getClientes();
-			assertEquals(CLIENTE1, arrayProfesores[0]);
-			assertEquals(CLIENTE2, arrayProfesores[1]);
-			assertEquals(CLIENTE3, arrayProfesores[2]);
+			List<Cliente> arrayProfesores = clientes.getClientes();
+			assertEquals(CLIENTE1, arrayProfesores.get(0));
+			assertEquals(CLIENTE2, arrayProfesores.get(1));
+			assertEquals(CLIENTE3, arrayProfesores.get(2));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -127,10 +127,10 @@ public class ClientesTest {
 		Clientes clientes = new Clientes();
 		try {
 			clientes.insertar(CLIENTE1);
-			Cliente[] arrayClientes = clientes.getClientes();
+			List<Cliente> arrayClientes = clientes.getClientes();
 			assertFalse(arrayClientes == clientes.getClientes());
-			assertFalse(arrayClientes[0] == clientes.getClientes()[0]);
-			assertEquals(arrayClientes[0], clientes.getClientes()[0]);
+			assertFalse(arrayClientes.get(0) == clientes.getClientes().get(0));
+			assertEquals(arrayClientes.get(0), clientes.getClientes().get(0));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -155,9 +155,9 @@ public class ClientesTest {
 			clientes.borrar(CLIENTE1);
 			assertEquals(2, clientes.getNumClientes());
 			assertNull(clientes.buscar(CLIENTE1));
-			Cliente[] arrayClientes = clientes.getClientes();
-			assertEquals(CLIENTE2, arrayClientes[0]);
-			assertEquals(CLIENTE3, arrayClientes[1]);
+			List<Cliente> arrayClientes = clientes.getClientes();
+			assertEquals(CLIENTE2, arrayClientes.get(0));
+			assertEquals(CLIENTE3, arrayClientes.get(1));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -170,9 +170,9 @@ public class ClientesTest {
 			clientes.borrar(CLIENTE2);
 			assertEquals(2, clientes.getNumClientes());
 			assertNull(clientes.buscar(CLIENTE2));
-			Cliente[] arrayClientes = clientes.getClientes();
-			assertEquals(CLIENTE1, arrayClientes[0]);
-			assertEquals(CLIENTE3, arrayClientes[1]);
+			List<Cliente> arrayClientes = clientes.getClientes();
+			assertEquals(CLIENTE1, arrayClientes.get(0));
+			assertEquals(CLIENTE3, arrayClientes.get(1));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -185,9 +185,9 @@ public class ClientesTest {
 			clientes.borrar(CLIENTE3);
 			assertEquals(2, clientes.getNumClientes());
 			assertNull(clientes.buscar(CLIENTE3));
-			Cliente[] arrayClientes = clientes.getClientes();
-			assertEquals(CLIENTE1, arrayClientes[0]);
-			assertEquals(CLIENTE2, arrayClientes[1]);
+			List<Cliente> arrayClientes = clientes.getClientes();
+			assertEquals(CLIENTE1, arrayClientes.get(0));
+			assertEquals(CLIENTE2, arrayClientes.get(1));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -231,10 +231,10 @@ public class ClientesTest {
 			clientes.insertar(CLIENTE1);
 			assertEquals(3, clientes.getNumClientes());
 			assertEquals(CLIENTE1, clientes.buscar(CLIENTE1));
-			Cliente[] arrayClientes = clientes.getClientes();
-			assertEquals(CLIENTE2, arrayClientes[0]);
-			assertEquals(CLIENTE3, arrayClientes[1]);
-			assertEquals(CLIENTE1, arrayClientes[2]);
+			List<Cliente> arrayClientes = clientes.getClientes();
+			assertEquals(CLIENTE2, arrayClientes.get(0));
+			assertEquals(CLIENTE3, arrayClientes.get(1));
+			assertEquals(CLIENTE1, arrayClientes.get(2));
 		} catch (OperationNotSupportedException e) {
 			fail(ERROR_NO_EXCEPCION);
 		}
@@ -249,10 +249,10 @@ public class ClientesTest {
 	@Test
 	public void representarTest() {
 		Clientes clientes = insertarTres();
-		String[] representacion = clientes.representar();
-		assertEquals(CLIENTE1.toString(), representacion[0]);
-		assertEquals(CLIENTE2.toString(), representacion[1]);
-		assertEquals(CLIENTE3.toString(), representacion[2]);
+		List<String> representacion = clientes.representar();
+		assertEquals(CLIENTE1.toString(), representacion.get(0));
+		assertEquals(CLIENTE2.toString(), representacion.get(1));
+		assertEquals(CLIENTE3.toString(), representacion.get(2));
 	}
 
 }
