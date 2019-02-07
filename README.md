@@ -1,6 +1,8 @@
 # Gestión de Clientes
 ## José Ramón Jiménez Reyes
 
+### Spring 1
+
 Debes crear un programa para la gestión de clientes de una empresa.
 
 - Una dirección postal constará de una dirección, una localidad y un código postal.
@@ -13,6 +15,10 @@ Debes crear un programa para la gestión de clientes de una empresa.
 - Para ello, por ahora debe utilizar arrays.
 - El programa principal mostrará un menú que nos permitirá realizar todas estas acciones.
 - Aunque aún no estamos utilizando el patrón MVC, deberás estruturar las clases en una vista y un modelo.
+
+### Spring 2
+
+Ahora se nos pide que eliminemos la restricción del tamaño del array, por lo que deberás sustituir la utilización de array por una estructura dinámica de datos.
 
 Para todo ello te propongo el siguiente diagrama de clases:
 
