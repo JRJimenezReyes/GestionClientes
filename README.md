@@ -20,6 +20,10 @@ Debes crear un programa para la gestión de clientes de una empresa.
 
 Ahora se nos pide que eliminemos la restricción del tamaño del array, por lo que deberás sustituir la utilización de array por una estructura dinámica de datos.
 
+### Spring 3
+
+Ahora debes hacer uso de las interfaces e implementar correctamente el patrón MVC.
+
 Para todo ello te propongo el siguiente diagrama de clases:
 
 ![Diagrama de clases para GestioClientes](src/main/resources/gestionClientes.png)
@@ -29,3 +33,6 @@ Se implementan las clases DAO con `array`.
 
 ## Commit etiquetado (tag) como "listas"
 Se implementan las clases DAO con `ArrayList`.
+
+## Commit etiquetado (tag) como "MVC"
+Se utilizan interfaces y se implementa el patrón MVC.
