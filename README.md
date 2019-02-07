@@ -35,4 +35,4 @@ Se implementan las clases DAO con `array`.
 Se implementan las clases DAO con `ArrayList`.
 
 ## Commit etiquetado (tag) como "MVC"
-Se utilizan interfaces y se implementa el patrón MVC.
+Se utilizan interfaces y se implementa el patrón MVC. 
