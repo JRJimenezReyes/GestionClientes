@@ -7,7 +7,7 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.gestionclientes.modelo.dao.Clientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 
-public class ModeloGestionClientes {
+public class ModeloGestionClientes implements IModeloGestionClientes {
 
 	private Clientes clientes;
 	
@@ -15,18 +15,22 @@ public class ModeloGestionClientes {
 		clientes = new Clientes();
 	}
 	
+	@Override
 	public void insertarCliente(Cliente cliente) throws OperationNotSupportedException {
 		clientes.insertar(cliente);
 	}
 	
+	@Override
 	public void borrarCliente(Cliente cliente) throws OperationNotSupportedException {
 		clientes.borrar(cliente);
 	}
 	
+	@Override
 	public Cliente buscarCliente(Cliente cliente) {
 		return clientes.buscar(cliente);
 	}
 	
+	@Override
 	public List<String> representarClientes() {
 		return clientes.representar();
 	}

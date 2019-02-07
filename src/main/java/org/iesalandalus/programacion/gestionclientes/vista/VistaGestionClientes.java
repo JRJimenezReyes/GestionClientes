@@ -4,22 +4,28 @@ import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.gestionclientes.modelo.ModeloGestionClientes;
+import org.iesalandalus.programacion.gestionclientes.controlador.IControladorGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 
 
-public class IUTextual {
+public class VistaGestionClientes implements IVistaGestionClientes {
 	
 	private static final String ERROR = "ERROR: ";
 	
-	private ModeloGestionClientes modelo;
+	private IControladorGestionClientes controlador;
 
-	public IUTextual() {
-		modelo = new ModeloGestionClientes();
+	public VistaGestionClientes() {
 		Opcion.setVista(this);
 	}
+	
+	@Override
+	public void setControlador(IControladorGestionClientes controlador) {
+		this.controlador = controlador;
+	}
 
+	@Override
 	public void comenzar() {
+		Consola.mostrarCabecera("Programa para la gestión de clientes");
 		int ordinalOpcion;
 		do {
 			Consola.mostrarMenu();
@@ -29,38 +35,42 @@ public class IUTextual {
 		} while (ordinalOpcion != Opcion.SALIR.ordinal());
 	}
 	
+	@Override
 	public void salir() {
 		System.out.println("Hasta luego Lucas!!!");
 	}
 	
+	@Override
 	public void insertarCliente() {
 		Consola.mostrarCabecera("Insertar cliente");
 		try {
 			Cliente cliente = Consola.leerCliente();
-			modelo.insertarCliente(cliente);
+			controlador.insertarCliente(cliente);
 			System.out.println("Cliente insertado correctamente.");
 		} catch (OperationNotSupportedException|IllegalArgumentException e) {
 			System.out.println(ERROR + e.getMessage());
 		}
 	}
 	
+	@Override
 	public void borrarCliente() {
 		Consola.mostrarCabecera("Borrar cliente");
 		try {
 			Cliente cliente = Consola.leerDniCliente();
-			modelo.borrarCliente(cliente);
+			controlador.borrarCliente(cliente);
 			System.out.println("Cliente borrado correctamente.");
 		} catch (OperationNotSupportedException|IllegalArgumentException e) {
 			System.out.println(ERROR + e.getMessage());
 		}
 	}
 	
+	@Override
 	public void buscarCliente() {
 		Consola.mostrarCabecera("Buscar cliente");
 		Cliente cliente = null;
 		try {
 			cliente = Consola.leerDniCliente();
-			cliente = modelo.buscarCliente(cliente);
+			cliente = controlador.buscarCliente(cliente);
 			if (cliente != null) {
 				System.out.println("El cliente buscado es: " + cliente);
 			} else {
@@ -71,9 +81,10 @@ public class IUTextual {
 		}
 	}
 	
+	@Override
 	public void listarClientes() {
 		Consola.mostrarCabecera("Listar clientes");
-		List<String> clientes = modelo.representarClientes();
+		List<String> clientes = controlador.listarClientes();
 		if (!clientes.isEmpty()) {
 			for (String cliente : clientes) {
 				System.out.println(cliente);
