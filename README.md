@@ -24,6 +24,10 @@ Ahora se nos pide que eliminemos la restricción del tamaño del array, por lo q
 
 Ahora debes hacer uso de las interfaces e implementar correctamente el patrón MVC.
 
+### Spring 4
+
+Ahora se propone tener persistencia de datos utilizando ficheros.
+
 Para todo ello te propongo el siguiente diagrama de clases:
 
 ![Diagrama de clases para GestioClientes](src/main/resources/gestionClientes.png)
@@ -35,4 +39,11 @@ Se implementan las clases DAO con `array`.
 Se implementan las clases DAO con `ArrayList`.
 
 ## Commit etiquetado (tag) como "MVC"
+<<<<<<< HEAD
+Se utilizan interfaces y se implementa el patrón MVC.
+
+## Commit etiquetado (tag) como "ficheros"
+Se utilizan ficheros para conseguir la persistencia de datos.
+=======
 Se utilizan interfaces y se implementa el patrón MVC. 
+>>>>>>> branch 'master' of https://github.com/JRJimenezReyes/GestionClientes.git

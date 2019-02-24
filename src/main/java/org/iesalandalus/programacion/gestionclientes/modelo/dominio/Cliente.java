@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.gestionclientes.modelo.dominio;
 
-public class Cliente {
+import java.io.Serializable;
+
+public class Cliente implements Serializable {
 
 	private DatosPersonales datosPersonales;
 	private DatosContacto datosContacto;

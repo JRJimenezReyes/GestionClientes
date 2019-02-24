@@ -34,4 +34,14 @@ public class ModeloGestionClientes implements IModeloGestionClientes {
 	public List<String> representarClientes() {
 		return clientes.representar();
 	}
+	
+	@Override
+	public void leerClientes() {
+		clientes.leer();
+	}
+	
+	@Override
+	public void escribirClientes() {
+		clientes.escribir();
+	}
 }

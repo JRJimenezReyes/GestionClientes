@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.gestionclientes.modelo.dominio;
 
-public class DireccionPostal {
+import java.io.Serializable;
+
+public class DireccionPostal implements Serializable {
 
 	private static final String ER_CODIGO_POSTAL = "\\d{5}";
 	

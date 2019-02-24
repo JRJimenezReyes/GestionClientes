@@ -37,7 +37,7 @@ public class VistaGestionClientes implements IVistaGestionClientes {
 	
 	@Override
 	public void salir() {
-		System.out.println("Hasta luego Lucas!!!");
+		controlador.salir();
 	}
 	
 	@Override

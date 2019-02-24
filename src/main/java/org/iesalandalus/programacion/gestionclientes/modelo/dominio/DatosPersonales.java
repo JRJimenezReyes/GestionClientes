@@ -1,10 +1,11 @@
 package org.iesalandalus.programacion.gestionclientes.modelo.dominio;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-public class DatosPersonales {
+public class DatosPersonales implements Serializable {
 
 	private static final String ER_DNI = "\\d{8}[A-Za-z]";
 	private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");

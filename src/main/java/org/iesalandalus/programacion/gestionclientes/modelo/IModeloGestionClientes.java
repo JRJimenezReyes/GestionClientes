@@ -15,5 +15,9 @@ public interface IModeloGestionClientes {
 	Cliente buscarCliente(Cliente cliente);
 
 	List<String> representarClientes();
+	
+	void leerClientes();
+	
+	void escribirClientes();
 
 }

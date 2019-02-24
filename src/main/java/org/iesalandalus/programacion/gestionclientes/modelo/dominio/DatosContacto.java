@@ -1,6 +1,8 @@
 package org.iesalandalus.programacion.gestionclientes.modelo.dominio;
 
-public class DatosContacto {
+import java.io.Serializable;
+
+public class DatosContacto implements Serializable {
 
 	private static final String ER_TELEFONO = "\\d{9}";
 	private static final String ER_CORREO = "\\w+(?:\\.\\w+)*@\\w+\\.\\w{2,5}";
