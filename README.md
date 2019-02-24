@@ -39,11 +39,7 @@ Se implementan las clases DAO con `array`.
 Se implementan las clases DAO con `ArrayList`.
 
 ## Commit etiquetado (tag) como "MVC"
-<<<<<<< HEAD
 Se utilizan interfaces y se implementa el patrón MVC.
 
 ## Commit etiquetado (tag) como "ficheros"
-Se utilizan ficheros para conseguir la persistencia de datos.
-=======
 Se utilizan interfaces y se implementa el patrón MVC. 
->>>>>>> branch 'master' of https://github.com/JRJimenezReyes/GestionClientes.git
