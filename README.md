@@ -28,9 +28,9 @@ Ahora debes hacer uso de las interfaces e implementar correctamente el patrón M
 
 Ahora se propone tener persistencia de datos utilizando ficheros.
 
-Para todo ello te propongo el siguiente diagrama de clases:
+### Spring 5
 
-![Diagrama de clases para GestioClientes](src/main/resources/gestionClientes.png)
+Ahora se propone que dotes a tu aplicación de una interfaz gráfica.
 
 ## Commit etiquetado (tag) como "array"
 Se implementan las clases DAO con `array`.
@@ -43,4 +43,7 @@ Se utilizan interfaces y se implementa el patrón MVC.
 
 ## Commit etiquetado (tag) como "ficheros"
 Persistencia de datos utilizando ficheros.
+
+## Commit etiquetado (tag) como "IUG"
+Se crean dos vistas adicionales para la aplicación, ambas gráficas. Una que hace uso de diferentes ventanas y otra que lo hace todo en una ventana por medio de un `TableView`
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="375.0" stylesheets="@../iugventanas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.gestionclientes.vista.iugventanas.controladoresvistas.ControladorMostrarCliente">
+   <children>
+      <AnchorPane />
+      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="358.0" spacing="20.0">
+         <children>
+            <Button fx:id="btBorrar" mnemonicParsing="false" onAction="#borrarCliente" text="Borrar Cliente" />
+            <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

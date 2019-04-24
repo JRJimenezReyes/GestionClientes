@@ -5,9 +5,9 @@ import org.iesalandalus.programacion.gestionclientes.controlador.IControladorGes
 import org.iesalandalus.programacion.gestionclientes.modelo.IModeloGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.ModeloGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.vista.IVistaGestionClientes;
-import org.iesalandalus.programacion.gestionclientes.vista.iugtablas.VistaGestionClientes;
+import org.iesalandalus.programacion.gestionclientes.vista.iutextual.VistaGestionClientes;
 
-public class MainApp {
+public class MainAppIUTextual {
 
 	public static void main(String[] args) {
 		IModeloGestionClientes modelo = new ModeloGestionClientes();

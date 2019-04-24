@@ -7,7 +7,7 @@ import org.iesalandalus.programacion.gestionclientes.modelo.ModeloGestionCliente
 import org.iesalandalus.programacion.gestionclientes.vista.IVistaGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.vista.iugtablas.VistaGestionClientes;
 
-public class MainApp {
+public class MainAppIUGTablas {
 
 	public static void main(String[] args) {
 		IModeloGestionClientes modelo = new ModeloGestionClientes();

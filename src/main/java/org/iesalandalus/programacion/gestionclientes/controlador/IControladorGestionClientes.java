@@ -19,5 +19,7 @@ public interface IControladorGestionClientes {
 	Cliente buscarCliente(Cliente cliente);
 
 	List<String> listarClientes();
+	
+	List<Cliente> getClientes();
 
 }

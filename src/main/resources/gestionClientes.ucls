@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.2" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+<class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="org.iesalandalus.programacion.gestionclientes.modelo.dominio.DireccionPostal" 
     project="GestionClientes" 
@@ -67,9 +67,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="org.iesalandalus.programacion.gestionclientes.vista.Consola" 
+  <class id="7" language="java" name="org.iesalandalus.programacion.gestionclientes.vista.iutextual.Consola" 
     project="GestionClientes" 
-    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/Consola.java" 
+    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/iutextual/Consola.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="8" y="1258"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -78,9 +78,9 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="org.iesalandalus.programacion.gestionclientes.vista.VistaGestionClientes" 
-    project="GestionClientes" 
-    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/VistaGestionClientes.java" 
+  <class id="8" language="java" 
+    name="org.iesalandalus.programacion.gestionclientes.vista.iutextual.VistaGestionClientes" project="GestionClientes" 
+    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/iutextual/VistaGestionClientes.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="438" y="950"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -89,10 +89,10 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="9" language="java" name="org.iesalandalus.programacion.gestionclientes.vista.Opcion" 
+  <enumeration id="9" language="java" name="org.iesalandalus.programacion.gestionclientes.vista.iutextual.Opcion" 
     project="GestionClientes" 
-    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/Opcion.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/vista/iutextual/Opcion.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="94" y="954"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,9 +100,10 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="10" language="java" name="org.iesalandalus.programacion.gestionclientes.MainApp" project="GestionClientes" 
-    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/MainApp.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="org.iesalandalus.programacion.gestionclientes.MainAppIUTextual" 
+    project="GestionClientes" 
+    file="/GestionClientes/src/main/java/org/iesalandalus/programacion/gestionclientes/MainAppIUTextual.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="891" y="357"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -156,70 +157,78 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <association id="15">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="16" name="datosContacto">        
+  <realization id="15">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="16">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="17" name="controlador">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="17" minimum="0" maximum="1">        
+      <multiplicity id="18" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="18">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="19" name="vista"/>      
-      <multiplicity id="20" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
+  <association id="19">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="22" name="direccionPostal">        
+      <attribute id="20" name="direccionPostal">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
+      <multiplicity id="21" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="24">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="25" name="coleccionClientes">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="26" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="28" name="datosPersonales">        
-        <position height="0" width="0" x="73" y="55"/>      
-      </attribute>      
-      <multiplicity id="29" minimum="0" maximum="1">        
-        <position height="0" width="0" x="73" y="55"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="30">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <association id="31">    
+  <association id="22">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="32" name="vista"/>      
-      <multiplicity id="33" minimum="0" maximum="1"/>    
+      <attribute id="23" name="vista">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="26" name="datosContacto">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="27" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="29" name="clientes">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="32" name="vista">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
@@ -236,54 +245,62 @@
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="37">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="38">    
+  <association id="37">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="39" name="DIRECCION_POSTAL_FICTICIA">        
+      <attribute id="38" name="DIRECCION_POSTAL_FICTICIA">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="40" minimum="0" maximum="1">        
+      <multiplicity id="39" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="41">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
-  <association id="42">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="43" name="controlador"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
+  <association id="40">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="46" name="modelo"/>      
-      <multiplicity id="47" minimum="0" maximum="1"/>    
+      <attribute id="41" name="modelo">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="42" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="49" name="clientes">        
+  <realization id="43">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <association id="44">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="45" name="coleccionClientes">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="50" minimum="0" maximum="2147483647">        
+      <multiplicity id="46" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="48" name="datosPersonales">        
+        <position height="0" width="0" x="73" y="55"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="0" width="0" x="73" y="55"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="50">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.gestionclientes.vista;
+package org.iesalandalus.programacion.gestionclientes.vista.iutextual;
 
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DatosContacto;

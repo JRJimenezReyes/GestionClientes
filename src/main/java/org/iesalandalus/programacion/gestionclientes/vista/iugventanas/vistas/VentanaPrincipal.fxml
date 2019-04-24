@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox spacing="20.0" styleClass="vbox" stylesheets="@../iugventanas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.gestionclientes.vista.iugventanas.controladoresvistas.ControladorVentanaPrincipal">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#acercaDe" text="Acerca de ..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TitledPane collapsible="false" prefHeight="300.0" prefWidth="250.0" text="Clientes">
+         <content>
+            <VBox alignment="CENTER" prefHeight="318.0" prefWidth="242.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btListarClientes" graphicTextGap="20.0" mnemonicParsing="false" onAction="#listarClientes" prefHeight="50.0" prefWidth="130.0" text="Listar">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/iconoListar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btAnadirCliente" graphicTextGap="10.0" mnemonicParsing="false" onAction="#anadirCliente" prefHeight="50.0" prefWidth="130.0" style="-fx-background-image: url('../../../../../../imagenes/iconoAnadir.png');" text="Añadir">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/iconoAnadir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btBuscarCliente" graphicTextGap="10.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="50.0" prefWidth="130.0" text="Buscar">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../imagenes/iconoBuscar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+         <graphic>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/iconoClientes.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </TitledPane>
+   </children>
+</VBox>

@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.gestionclientes.vista;
+package org.iesalandalus.programacion.gestionclientes.vista.iutextual;
 
 public enum Opcion {
 	SALIR("Salir") {
@@ -28,7 +28,7 @@ public enum Opcion {
 	};
 	
 	private String mensajeAMostrar;
-	private static IVistaGestionClientes vista;
+	private static VistaGestionClientes vista;
 	
 	private Opcion(String mensajeAMostrar) {
 		this.mensajeAMostrar = mensajeAMostrar;
@@ -40,7 +40,7 @@ public enum Opcion {
 	
 	public abstract void ejecutar();
 	
-	protected static void setVista(IVistaGestionClientes vista) {
+	protected static void setVista(VistaGestionClientes vista) {
 		Opcion.vista = vista;
 	}
 	

@@ -8,14 +8,4 @@ public interface IVistaGestionClientes {
 
 	void comenzar();
 
-	void salir();
-
-	void insertarCliente();
-
-	void borrarCliente();
-
-	void buscarCliente();
-
-	void listarClientes();
-
 }

@@ -1,0 +1,49 @@
+* {
+	-fx-font: 14 arial;
+	-fx-base: #b0c4de;
+}
+
+.titled-pane .title {
+	-fx-background-radius: 20 20 0 0;
+	-fx-border-color: none;
+}
+
+.titled-pane .content {
+	-fx-background-radius: 0 0 20 20;
+	-fx-border-color: none;
+}
+
+.titled-pane .title .text {
+	-fx-font: bold 20 "arial";
+	-fx-base: #b6e7c9;
+}
+
+.titled-pane .content {
+	-fx-background-color: #4682b4;
+}
+
+.vbox {
+	-fx-background-color: #b0c4de;
+}
+
+.menu-item, .context-menu {
+	-fx-background-color: #b0c4de;
+}
+
+.menu-item:hover, .context-menu:hover {
+	-fx-background-color: #4682b4;
+}
+
+.button {
+	-fx-background-radius: 10;
+}
+
+#btAnadir, #btAceptar, #btListar, #btAnadirHoras, #btAnadirPrecioMaterial {
+	-fx-font: 22 "arial";
+	-fx-base: #b6e7c9;
+}
+
+#btCancelar, #btBorrar, #btCerrar {
+	-fx-font: 20 "arial";
+	-fx-base: #dc143c;
+}

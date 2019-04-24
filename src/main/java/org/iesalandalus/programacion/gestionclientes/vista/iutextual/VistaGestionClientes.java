@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.gestionclientes.vista;
+package org.iesalandalus.programacion.gestionclientes.vista.iutextual;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.gestionclientes.controlador.IControladorGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
+import org.iesalandalus.programacion.gestionclientes.vista.IVistaGestionClientes;
 
 
 public class VistaGestionClientes implements IVistaGestionClientes {
@@ -35,12 +36,10 @@ public class VistaGestionClientes implements IVistaGestionClientes {
 		} while (ordinalOpcion != Opcion.SALIR.ordinal());
 	}
 	
-	@Override
 	public void salir() {
 		controlador.salir();
 	}
 	
-	@Override
 	public void insertarCliente() {
 		Consola.mostrarCabecera("Insertar cliente");
 		try {
@@ -52,7 +51,6 @@ public class VistaGestionClientes implements IVistaGestionClientes {
 		}
 	}
 	
-	@Override
 	public void borrarCliente() {
 		Consola.mostrarCabecera("Borrar cliente");
 		try {
@@ -64,7 +62,6 @@ public class VistaGestionClientes implements IVistaGestionClientes {
 		}
 	}
 	
-	@Override
 	public void buscarCliente() {
 		Consola.mostrarCabecera("Buscar cliente");
 		Cliente cliente = null;
@@ -81,7 +78,6 @@ public class VistaGestionClientes implements IVistaGestionClientes {
 		}
 	}
 	
-	@Override
 	public void listarClientes() {
 		Consola.mostrarCabecera("Listar clientes");
 		List<String> clientes = controlador.listarClientes();

@@ -36,6 +36,11 @@ public class ModeloGestionClientes implements IModeloGestionClientes {
 	}
 	
 	@Override
+	public List<Cliente> getClientes() {
+		return clientes.getClientes();
+	}
+	
+	@Override
 	public void leerClientes() {
 		clientes.leer();
 	}

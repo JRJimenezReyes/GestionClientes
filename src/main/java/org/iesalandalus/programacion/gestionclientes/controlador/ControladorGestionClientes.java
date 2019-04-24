@@ -52,4 +52,9 @@ public class ControladorGestionClientes implements IControladorGestionClientes {
 		return modelo.representarClientes();
 	}
 	
+	@Override
+	public List<Cliente> getClientes() {
+		return modelo.getClientes();
+	}
+	
 }

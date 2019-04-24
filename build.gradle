@@ -38,6 +38,19 @@ jar {
 	}
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+
+
 run {
     
 	doFirst {
