@@ -35,6 +35,7 @@ public class ControladorVentanaPrincipal {
 	private IControladorGestionClientes controladorMVC;
 	private Stage listadoClientes;
 	private Stage anadirCliente;
+	private ControladorAnadirCliente cAnadirCliente;
 	private Stage mostrarCliente;
 	private ControladorMostrarCliente cMostrarCliente;
 	
@@ -119,7 +120,7 @@ public class ControladorVentanaPrincipal {
 			FXMLLoader cargadorAnadirCliente = new FXMLLoader(
 						getClass().getResource("../vistas/AnadirCliente.fxml"));
 			VBox raizAnadirCliente = cargadorAnadirCliente.load();
-			ControladorAnadirCliente cAnadirCliente = cargadorAnadirCliente.getController();
+			cAnadirCliente = cargadorAnadirCliente.getController();
 			cAnadirCliente.setControladorMVC(controladorMVC);
 
 			FXMLLoader cargadorDatosCliente = new FXMLLoader(
@@ -132,6 +133,8 @@ public class ControladorVentanaPrincipal {
 			anadirCliente.setTitle("Añadir cliente");
 			anadirCliente.initModality(Modality.APPLICATION_MODAL); 
 			anadirCliente.setScene(escenaAnadirCliente);
+		} else {
+			cAnadirCliente.setCliente(null);
 		}
 	}
 	

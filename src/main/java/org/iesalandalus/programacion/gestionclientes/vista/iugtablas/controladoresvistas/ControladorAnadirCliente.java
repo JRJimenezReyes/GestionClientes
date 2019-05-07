@@ -57,6 +57,18 @@ public class ControladorAnadirCliente {
 		this.clientes = clientes;
 	}
 	
+	public void inicializa() {
+		tfNombre.setText("");
+		tfApellidos.setText("");
+		tfDni.setText("");
+		dpFechaNacimiento.setValue(null);
+		tfTelefono.setText("");
+		tfCorreo.setText("");
+		tfDireccion.setText("");
+		tfLocalidad.setText("");
+		tfCodigoPostal.setText("");
+	}
+	
 	@FXML
 	private void anadirCliente() {
 		Cliente cliente = null;

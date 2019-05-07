@@ -64,6 +64,7 @@ public class ControladorVentanaPrincipal {
 	private ObservableList<Cliente> clientes = FXCollections.observableArrayList();
 	private FilteredList<Cliente> clientesFiltrados = new FilteredList<>(clientes, p -> true);
 	private Stage anadirCliente;
+	private ControladorAnadirCliente cAnadirCliente;
 
 	@FXML
 	private void initialize() {
@@ -176,13 +177,15 @@ public class ControladorVentanaPrincipal {
 			FXMLLoader cargadorAnadirCliente = new FXMLLoader(
 						getClass().getResource("../vistas/AnadirCliente.fxml"));
 			VBox raizAnadirCliente = cargadorAnadirCliente.load();
-			ControladorAnadirCliente cAnadirCliente = cargadorAnadirCliente.getController();
+			cAnadirCliente = cargadorAnadirCliente.getController();
 			cAnadirCliente.setControladorMVC(controladorMVC);
 			cAnadirCliente.setClientes(clientes);
 			Scene escenaAnadirCliente = new Scene(raizAnadirCliente);
 			anadirCliente.setTitle("Añadir cliente");
 			anadirCliente.initModality(Modality.APPLICATION_MODAL); 
 			anadirCliente.setScene(escenaAnadirCliente);
+		} else {
+			cAnadirCliente.inicializa();
 		}
 	}
 

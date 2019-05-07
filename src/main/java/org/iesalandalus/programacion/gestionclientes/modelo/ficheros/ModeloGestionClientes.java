@@ -1,11 +1,12 @@
-package org.iesalandalus.programacion.gestionclientes.modelo;
+package org.iesalandalus.programacion.gestionclientes.modelo.ficheros;
 
 import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.gestionclientes.modelo.dao.Clientes;
+import org.iesalandalus.programacion.gestionclientes.modelo.IModeloGestionClientes;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
+import org.iesalandalus.programacion.gestionclientes.modelo.ficheros.dao.Clientes;
 
 public class ModeloGestionClientes implements IModeloGestionClientes {
 
@@ -13,6 +14,16 @@ public class ModeloGestionClientes implements IModeloGestionClientes {
 	
 	public ModeloGestionClientes() {
 		clientes = new Clientes();
+	}
+	
+	@Override
+	public void comenzar() {
+		clientes.leer();
+	}
+	
+	@Override
+	public void terminar() {
+		clientes.escribir();
 	}
 	
 	@Override
@@ -40,13 +51,4 @@ public class ModeloGestionClientes implements IModeloGestionClientes {
 		return clientes.getClientes();
 	}
 	
-	@Override
-	public void leerClientes() {
-		clientes.leer();
-	}
-	
-	@Override
-	public void escribirClientes() {
-		clientes.escribir();
-	}
 }

@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.gestionclientes.modelo.dao;
+package org.iesalandalus.programacion.gestionclientes.modelo.ficheros.dao;
 
 import java.io.EOFException;
 import java.io.File;

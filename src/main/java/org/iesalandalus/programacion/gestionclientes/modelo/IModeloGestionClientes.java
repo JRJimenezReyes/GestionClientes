@@ -7,6 +7,10 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 
 public interface IModeloGestionClientes {
+	
+	void comenzar();
+	
+	void terminar();
 
 	void insertarCliente(Cliente cliente) throws OperationNotSupportedException;
 
@@ -17,9 +21,5 @@ public interface IModeloGestionClientes {
 	List<String> representarClientes();
 	
 	List<Cliente> getClientes();
-	
-	void leerClientes();
-	
-	void escribirClientes();
 
 }

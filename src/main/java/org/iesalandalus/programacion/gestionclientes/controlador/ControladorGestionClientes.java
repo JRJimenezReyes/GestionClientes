@@ -22,13 +22,13 @@ public class ControladorGestionClientes implements IControladorGestionClientes {
 
 	@Override
 	public void comenzar() {
-		modelo.leerClientes();
+		modelo.comenzar();
 		vista.comenzar();
 	}
 	
 	@Override
 	public void salir() {
-		modelo.escribirClientes();
+		modelo.terminar();
 		System.out.println("Hasta luego Lucas!!!");
 	}
 	

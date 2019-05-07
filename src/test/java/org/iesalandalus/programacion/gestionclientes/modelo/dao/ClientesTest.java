@@ -15,6 +15,7 @@ import org.iesalandalus.programacion.gestionclientes.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DatosContacto;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DatosPersonales;
 import org.iesalandalus.programacion.gestionclientes.modelo.dominio.DireccionPostal;
+import org.iesalandalus.programacion.gestionclientes.modelo.ficheros.dao.Clientes;
 import org.junit.Test;
 
 public class ClientesTest {

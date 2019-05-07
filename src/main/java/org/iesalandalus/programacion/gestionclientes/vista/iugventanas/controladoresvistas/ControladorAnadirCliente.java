@@ -20,6 +20,10 @@ public class ControladorAnadirCliente {
 	public void setDatosCliente(ControladorDatosCliente datosCliente) {
 		this.datosCliente = datosCliente;
 	}
+	
+	public void setCliente(Cliente cliente) {
+		datosCliente.setCliente(cliente);
+	}
 
 	@FXML private Button btAnadir;
 	@FXML private Button btCancelar;
