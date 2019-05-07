@@ -32,6 +32,10 @@ Ahora se propone tener persistencia de datos utilizando ficheros.
 
 Ahora se propone que dotes a tu aplicación de una interfaz gráfica.
 
+### Spring 6
+
+Ahora se propone que dotes a tu aplicación de persistencia de datos en una BD.
+
 ## Commit etiquetado (tag) como "array"
 Se implementan las clases DAO con `array`.
 
@@ -46,4 +50,7 @@ Persistencia de datos utilizando ficheros.
 
 ## Commit etiquetado (tag) como "IUG"
 Se crean dos vistas adicionales para la aplicación, ambas gráficas. Una que hace uso de diferentes ventanas y otra que lo hace todo en una ventana por medio de un `TableView`
+
+## Commit etiquetado (tag) como "BD"
+Se crea un modelo adicional con acceso a una BD MongoDB.
 
