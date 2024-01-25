@@ -1,7 +1,7 @@
 # Gestión de Clientes
 ## José Ramón Jiménez Reyes
 
-### Spring 1
+### Sprint 1
 
 Debes crear un programa para la gestión de clientes de una empresa.
 
@@ -16,23 +16,23 @@ Debes crear un programa para la gestión de clientes de una empresa.
 - El programa principal mostrará un menú que nos permitirá realizar todas estas acciones.
 - Aunque aún no estamos utilizando el patrón MVC, deberás estruturar las clases en una vista y un modelo.
 
-### Spring 2
+### Sprint 2
 
 Ahora se nos pide que eliminemos la restricción del tamaño del array, por lo que deberás sustituir la utilización de array por una estructura dinámica de datos.
 
-### Spring 3
+### Sprint 3
 
 Ahora debes hacer uso de las interfaces e implementar correctamente el patrón MVC.
 
-### Spring 4
+### Sprint 4
 
 Ahora se propone tener persistencia de datos utilizando ficheros.
 
-### Spring 5
+### Sprint 5
 
 Ahora se propone que dotes a tu aplicación de una interfaz gráfica.
 
-### Spring 6
+### Sprint 6
 
 Ahora se propone que dotes a tu aplicación de persistencia de datos en una BD.
 
